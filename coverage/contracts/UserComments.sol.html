@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/UserComments.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> UserComments.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.11;
+&nbsp;
+&nbsp;
+/// @title User Comments
+/// @author Mark Beylin &lt;mark.beylin@consensys.net&gt;
+&nbsp;
+contract UserComments {
+    event CommentAdded(string _comment, address _from, address _to, uint _time);
+&nbsp;
+    struct Comment{
+      string comment;
+      address from;
+      address to;
+      bool aboutBounty;
+      uint bountyId;
+      uint time;
+    }
+&nbsp;
+&nbsp;
+    mapping (address =&gt; mapping (address =&gt; Comment)) public commentsMap;
+    mapping (address =&gt; Comment[]) public commentsAboutUser;
+    mapping (address =&gt; Comment[]) public commentsByUser;
+    mapping (uint =&gt; Comment[]) public commentsAboutBounty;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    modifier isValidAboutIndex(address _about, uint </span>i){
+<span class="cstat-no" title="statement not covered" >      require (i &lt; commentsAboutUser[_about].length)</span>;
+      _;
+    }
+<span class="fstat-no" title="function not covered" >    modifier isValidByIndex(address _by, uint </span>i){
+<span class="cstat-no" title="statement not covered" >      require (i &lt; commentsByUser[_by].length)</span>;
+      _;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function addComment(string _comment, address _to, bool _aboutBounty, uint _bountyId)</span>
+    public
+    {
+      commentsByUser[msg.sender].push(Comment(_comment, msg.sender, _to, _aboutBounty, _bountyId, block.timestamp));
+<span class="cstat-no" title="statement not covered" >      if (_aboutBounty){</span>
+        commentsAboutBounty[_bountyId].push(commentsByUser[msg.sender][commentsByUser[msg.sender].length - 1]);
+      } else {
+        commentsAboutUser[_to].push(commentsByUser[msg.sender][commentsByUser[msg.sender].length - 1]);
+<span class="cstat-no" title="statement not covered" >        commentsMap[msg.sender][_to] = commentsByUser[msg.sender][commentsByUser[msg.sender].length - 1]</span>;
+      }
+<span class="cstat-no" title="statement not covered" >      CommentAdded(_comment, msg.sender, _to, block.timestamp)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function numCommentsAboutUser(address _user)</span>
+    public
+    constant
+    returns (uint){
+<span class="cstat-no" title="statement not covered" >      return commentsAboutUser[_user].length;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function numCommentsAboutBounty(uint _bountyId)</span>
+    public
+    constant
+    returns (uint){
+<span class="cstat-no" title="statement not covered" >      return commentsAboutBounty[_bountyId].length;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function numCommentsByUser(address _user)</span>
+    public
+    constant
+    returns (uint){
+<span class="cstat-no" title="statement not covered" >      return commentsByUser[_user].length;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCommentAboutAddress(address _about, uint _commentId)</span>
+    isValidAboutIndex(_about, _commentId)
+    public
+    constant
+    returns (string, address, uint){
+<span class="cstat-no" title="statement not covered" >      return (commentsAboutUser[_about][_commentId].comment,</span>
+              commentsAboutUser[_about][_commentId].from,
+              commentsAboutUser[_about][_commentId].time);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCommentByAddress(address _by, uint _commentId)</span>
+    isValidByIndex(_by, _commentId)
+    public
+    constant
+    returns (string, address, bool, uint, uint){
+<span class="cstat-no" title="statement not covered" >      return (commentsByUser[_by][_commentId].comment,</span>
+              commentsByUser[_by][_commentId].to,
+              commentsByUser[_by][_commentId].aboutBounty,
+              commentsByUser[_by][_commentId].bountyId,
+              commentsByUser[_by][_commentId].time);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCommentFromTo(address _from, address _to)</span>
+    public
+    constant
+    returns (string, address, address, uint){
+<span class="cstat-no" title="statement not covered" >      return (commentsMap[_from][_to].comment,</span>
+              commentsMap[_from][_to].from,
+              commentsMap[_from][_to].to,
+              commentsMap[_from][_to].time);
+    }
+<span class="fstat-no" title="function not covered" >    function getCommentAboutBounty(uint _bountyId, uint _commentId)</span>
+    public
+    constant
+    returns (string, address, uint){
+<span class="cstat-no" title="statement not covered" >      return (commentsAboutBounty[_bountyId][_commentId].comment,</span>
+              commentsAboutBounty[_bountyId][_commentId].from,
+              commentsAboutBounty[_bountyId][_commentId].time);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 19:35:33 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
