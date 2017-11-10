@@ -11,7 +11,7 @@ An initial draft was completed on October 12, 2017 and was finalized on October 
 
 ## The Scope
 
-The Blockchain at Berkeley team reviewed the Spankchain auction code with the following metrics in mind:
+The Blockchain at Berkeley team reviewed the StandardBounties code with the following metrics in mind:
 
 ### Security 
 Identification of potential security flaws/attacks including but not limited to: 
